@@ -390,18 +390,7 @@ function updateSyncBadge() {
     error:  `<div style="font-size:10px;font-weight:600;color:#ef4444;margin-bottom:4px;">⚠️ Sync Error</div><div style="font-size:10px;color:#475569;">Check internet connection.</div>`
   };
   el.innerHTML = map[S.syncStatus] || map.synced;
-}
-
-function defaultCase() {
-  return {
-    id:1, title:"Anti-Angiogenic Study of Marine Algae Extract",
-    field:"Life Science / Cancer Research", filedBy:"Researcher A",
-    status:"For Receiving of the Secretary-General", justification:"",
-    timeline:[{status:"For Receiving of the Secretary-General", date:new Date().toLocaleString()}],
-    messages:[], evaluation:null, ethicsReportStatus:null
-  };
-}
-
+ 
 function statusMeta(s) {
   if (s.includes("Approved"))        return {bg:"#dcfce7",color:"#15803d",border:"#86efac",dot:"#16a34a",icon:"✅"};
   if (s==="Rejected"||s==="Rejected Appeal (With Finality)") return {bg:"#fee2e2",color:"#b91c1c",border:"#fca5a5",dot:"#dc2626",icon:"❌"};
