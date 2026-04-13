@@ -947,23 +947,6 @@ function renderInbox(){
   </div>`;
 }
 
-function renderForm(){
-  return `<div class="form-wrap">
-    <h2 class="form-title">File a New Case</h2>
-    <p class="form-sub">Submit a research study for ethics review. All fields are required.</p>
-    <div class="form-card">
-      <label class="form-label">Study / Research Title</label>
-      <input class="form-input" style="margin-bottom:16px;" placeholder="e.g. Anti-Angiogenic Study of Marine Algae Extract" value="${esc(S.newTitle)}" oninput="S.newTitle=this.value" />
-      <div class="form-grid">
-        <div><label class="form-label">Research Field</label><input class="form-input" placeholder="e.g. Life Science" value="${esc(S.newField)}" oninput="S.newField=this.value" /></div>
-        <div><label class="form-label">Filed By</label><input class="form-input" placeholder="Researcher name" value="${esc(S.newFiledBy)}" oninput="S.newFiledBy=this.value" /></div>
-      </div>
-      <div class="info-box">ℹ️ &nbsp;Cases are initially set to <strong>"For Receiving of the Secretary-General"</strong>. An admin will then process the review.</div>
-      <button class="btn-submit" onclick="addCase()">✅ &nbsp;Submit Case for Review</button>
-    </div>
-  </div>`;
-}
-
 function renderLoginModal(){
   return `<div class="modal-overlay" onclick="if(event.target===this){S.showLogin=false;render();}">
     <div class="modal" style="max-width:380px;">
